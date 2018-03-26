@@ -1,5 +1,7 @@
 (function() {
 	var root = this
+    console.warn("源码里已强制设alpha=true!!!")
+    var HAS_ALPHA = true
 
 	/**
 	 * High-quality scale function for canvas or image element
@@ -62,7 +64,7 @@
 
 		if (!sw || !sh ) return false
 		if (input.src || inputRemovable) {
-			canvas.clearRect(0, 0, sw, sh)
+			ctx.clearRect(0, 0, sw, sh)
 		}
 		if (typeof scale === 'object') {
 			if (scale.width) {
